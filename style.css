@@ -1,0 +1,381 @@
+*{
+    font-family: Helvetica, sans-serif;
+    color: white;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+:root {
+    --text: #EDF1F7;
+    --red: #C51212;
+    --blue: #0041C2;
+    --green: #14B02D;
+    --yellow: #ffc12b; 
+}
+
+body, button, a {
+    color: var(--text);
+    font: 400 1rem "Mukta", sans-serif;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+#background {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+#background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+#background::after {
+    content: '';
+
+    width: inherit;
+    height: inherit;
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);;
+}
+
+#app {
+    
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    
+}
+
+header {
+    display: flex;
+    align-items: center;
+    column-gap: 64px;
+    width: 100%;
+    max-width: 1000px;
+    padding-top: 24px;
+    justify-content: space-between;
+    
+    
+    
+}
+
+header img {
+    width: 250px;
+    height: auto;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    column-gap: 48px;
+    list-style: none;
+    
+}
+
+.navigation__link {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 8px;
+    
+
+    position: relative;
+}
+
+.navigation__link:hover {
+ color: var(--red);
+}
+
+.navigation__link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+
+    width: 60%;
+    height: 1px;
+    background: var(--red);
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s;
+}
+
+.navigation__link:hover::after {
+     transform: scaleX(1);
+     transform-origin: left;
+     transition: transform 0.4s;
+}
+
+.navigation__social {
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+    
+}
+
+.navigation__social svg {
+    width: 20px;
+    height: 20px;
+    opacity: 0.6;
+
+    transition: all 0.4s;
+    
+}
+.navigation__social svg:hover {
+    opacity: 1;
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+#mapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 0vh;
+    padding-top: 0px;
+    margin-top: -400px;
+}
+#telefone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 0vh;
+    padding-top: 0px;
+    margin-top: 80px;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    padding-top: 0px;
+    font-size: 25px;
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+    font-size: 25px;
+}
+
+
+main img {
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+
+#btn-mobile {
+    display: none;
+    
+}
+
+@media (max-width: 650px) {
+    
+    #menu {
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 149px;
+        right: 0px;
+        background: rgb(77, 76, 76);
+        
+        
+        
+    }
+    #nav.active #menu {
+        display: block;
+    }
+    #btn-mobile {
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+    }
+    #hamburger {
+        color: white;
+        display: block;
+        border-top: 2px solid;
+        width: 20px;
+    }
+    #hamburger::after, #hamburger::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+    #nav.active #hamburger {
+        border-top-color: transparent;
+    }
+    #nav.active #hamburger::before {
+        transform: rotate(135deg);
+    }
+    #nav.active #hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+}
+img {
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.mapalotes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    transition: transform 0.3s ease;
+   
+}
+
+.mapalotes:hover {
+    transform: scale(1.04);
+}
+
+.mapaterrenos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+
+
+main h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    font-family: Helvetica;
+    font-size: 20px;
+
+}
+
+.contatoguilherme img {
+    transition: opacity 0.3s ease;
+    opacity: 1; 
+}
+
+.contatoguilherme img:hover {
+    opacity: 0.2;    
+    
+}
+.contatoguilherme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    
+}
+
+
+main h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Helvetica;
+    font-size: 20px;
+}
+
+.contatorafael img {
+    transition: opacity 0.3s ease;
+    opacity: 1; 
+}
+
+.contatorafael img:hover {
+    opacity: 0.2; 
+}
+
+.contatorafael {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    
+}
+
+
+.titulo {
+    display: flex;
+    margin-top: 50px;
+    text-align: center;
+    font-family: Helvetica;
+    font-weight: 500;
+    
+}
+
+.paragrafo {
+    text-align: justify;
+    margin-top: 40px;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    
+}
+
+.footer {
+     /* Cor de fundo */
+    color: white;           /* Cor do texto */
+    text-align: center;     /* Centraliza o texto */
+    padding: 20px 0;       /* Espaçamento interno */
+}
+
+.container {
+    max-width: auto;    /* Largura máxima */
+    margin: 0 auto;        /* Centraliza o contêiner */
+}
+
+.social-links {
+    list-style-type: none;  /* Remove marcadores da lista */
+    padding: 0;             /* Remove espaçamento padrão */
+}
+
+.social-links li {
+    display: inline;        /* Alinha os itens da lista em linha */
+    margin: 0 10px;        /* Espaçamento entre os links */
+}
+
+.social-links a {
+    color: white;          /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+.social-links a:hover {
+    text-decoration: underline; /* Sublinha ao passar o mouse */
+}
