@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <title>Blumswiss</title>
+</head>
+<body>
+    <!--Header -Cabecalho
+    nav -Menu de navegacao
+    ul - lista
+    lil - item da lista
+    a - link
+    main - conteudo principal da pagina
+    section - sessao do meu site
+    -->
+    <div id="app">
+    <header id="header">
+        <nav class="navbar" id="nav">
+            <div class="logo"><img src="logo.png" alt="Logo Blumswiss"></div>
+            <button id="btn-mobile">
+                <span id="hamburger"></span>
+            </button>
+            <ul class="nav-links" id="menu" class="navigation">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#produtos">Terrenos</a></li>
+                <li><a href="#localizacao">Localização</a></li>
+            </ul>
+        </nav>
+    </header>
+    </div>
+
+    <main>
+       <section id="home" class="hero">
+    <video autoplay muted loop class="bg-video">
+        <source src="fundovideo.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-conteudo">
+        <h1>Bem-Vindo</h1>
+        <a href="#terreno" class="btn">Conheça nossos Terrenos</a>
+    </div>
+</section>
+
+        
+        <section id="sobre" class="sobre">
+            <div class="container">
+                <h2>Sobre nós</h2>
+                <p>Descubra o lugar dos seus sonhos! Nosso site oferece uma seleção de terrenos e lotes em Ponta Grossa e Ipiranga, Paraná. Com opções para construção de casas, investimentos ou lazer, garantimos segurança e documentação regularizada. Navegue por nossas ofertas e encontre o espaço ideal para o seu futuro!</p>
+            </div>
+        </section>
+
+        <section id="produtos" class="produtos">
+            <div class="container">
+                <h2 id="terreno" class="terreno">Nossos Terrenos</h2>
+                <div class="produtos-grid">
+                    <article class="produto-card">
+                        <div class="produto-icon"><img src="imagemterreno.jpeg" alt="Imagem do Terreno"></div>
+                        <h3>Loteamento Ipiranga</h3>
+                        <p>44 Lotes</p>
+                    </article>
+
+                
+                </div>
+            </div>
+        </section>
+
+        <section id="localizacao" class="localizacao">
+            <div class="container">
+                <h2>Onde estamos</h2>
+                <div class="contato-info">
+                    <p> Ipiranga - Pr</p>
+                    
+                  
+                </div>
+                <div class="mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2143.789291202523!2d-50.581010632259684!3d-25.015711085206306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e85bc16c23607b%3A0xebe38f34cadcb58f!2sIpiranga%2C%20PR%2C%2084450-000!5e1!3m2!1spt-BR!2sbr!4v1760572245797!5m2!1spt-BR!2sbr" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>2025 Blumswiss - Todos os direitos reservados</p>
+    </footer>
+    <script src="js.js"></script>
+    
+   <a href="https://wa.me/5542999708917" target="_blank" class="whatsapp-btn rafael" aria-label="WhatsApp Rafael">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+    <span>Rafael</span>
+  </a>
+
+  <a href="https://wa.me/5542999082244" target="_blank" class="whatsapp-btn guilherme" aria-label="WhatsApp Guilherme">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+    <span>Guilherme</span>
+  </a>
+
+</body>
+</html>
